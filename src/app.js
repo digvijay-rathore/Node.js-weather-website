@@ -37,7 +37,7 @@ app.get('/about', (req, res) => {
 
 app.get('/help', (req, res) => {
     res.render('help', {
-        msg : 'We are at crash site 1',
+        msg : 'This is some helpful text',
         title : 'Help',
         name : 'Digvijay Rathore'
     });
