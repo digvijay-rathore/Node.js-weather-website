@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <title>Login</title>
+        <link rel="icon" href="/img/weather.png">
+        <link rel="stylesheet" href="/css/styles.css">
+    </head>
+
+    <body>
+        <h1>{{title}}</h1><br><br><br>
+
+        <div class="main-content">
+            <form action="/login" method="POST">
+                <input type="email" name="t1" placeholder="Email"><br>
+                {{#if error.t1}}
+                    <p id="login-error">{{error.t1.msg}}</p>
+                {{/if}}
+                <input type="password" name="t2" placeholder="Password">
+                {{#if error.t2}}
+                    <p id="login-error">{{error.t2.msg}}</p>
+                {{/if}}
+                {{#if loginError}}
+                    <p id="login-error">Invalid login or password. Please try again!</p>
+                {{/if}}
+                <br><br><button type="submit">LOGIN</button>
+                <br><br><a href="signup">Sign Up</a>
+            </form>
+        </div>
+
+        {{>footer}}
+    </body>
+
+</html>

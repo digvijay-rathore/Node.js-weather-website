@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <title>Sign Up</title>
+        <link rel="icon" href="/img/weather.png">
+        <link rel="stylesheet" href="/css/styles.css">
+    </head>
+
+    <body>
+        <h1>{{title}}</h1><br><br><br>
+
+        <div class="main-content">
+            <form action="/signup-validate" method="POST">
+                <input type="text" name="s1" placeholder="Name"><br> 
+                {{#if error.s1}}
+                    <p id="signup-error">{{error.s1.msg}}</p>
+                {{/if}}
+                <input type="email" name="s2" placeholder="Email"><br>
+                {{#if error.s2}}
+                    <p id="signup-error">{{error.s2.msg}}</p>
+                {{/if}}
+                <input type="password" name="s3" placeholder="Password"><br>
+                {{#if error.s3}}
+                    <p id="signup-error">{{error.s3.msg}}</p>
+                {{/if}}
+                <input type="password" name="s4" placeholder="Confirm Password">
+                {{#if error.s4}}
+                    <p id="signup-error">{{error.s4.msg}}</p>
+                {{/if}}
+                {{#if signupError}}
+                    <p id="signup-error">User with this id already exists!</p>
+                {{/if}}
+                <br><br><button type="submit">Sign Up</button>
+            </form>
+        </div>
+
+        {{>footer}}
+    </body>
+
+</html>

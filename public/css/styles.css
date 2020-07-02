@@ -35,6 +35,7 @@ header a {
     color: #888888;
     margin-right: 16px;
     text-decoration: none;
+    font-size: 20px;
 }
 
 .portrait {
@@ -53,3 +54,16 @@ button {
     color: white;
     padding: 8px;
 }
+
+#login-error {
+    color: red;
+}
+
+#signup-error {
+    color: red;
+}
+
+#welcome-text {
+    color: #4d4d4d;
+    font-size: 17px;
+} 
